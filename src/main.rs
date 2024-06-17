@@ -52,7 +52,18 @@ if message == true {
 
    // activity match expression b
 
-   
+   let num = 4;
+
+   match  num {
+
+    1 => println!(" its number 1"),
+    2=> println!(" its number 2"),
+    3=> println!(" its number 3"),
+    _ => println!(" gattcha its your num!"),
+       
+   }
+
+
 
 
 
