@@ -1,3 +1,5 @@
+use std::collections::btree_map::Values;
+
 enum Direction {
     Up,
     Down,
@@ -29,6 +31,18 @@ struct Drink{
     flavors: Flavors,
 
 }
+
+enum Access{
+    Admin,
+    Manager,
+    User,
+    Guest,
+}
+
+
+
+
+
 
 fn main() {
 
@@ -199,9 +213,78 @@ if message == true {
 
 
 
+    // tuples in rust
+
+    let coord = (2,3);
+
+    println!("{:?}",coord.0);
+    println!("{:?}",coord.1);
+
+    let(x,y)=(2,3);
+    println!("{:?},{:?}",x,y);
+
+    let (name,age) =("Emma",20);
+
+    let favorites = ("red",14,"tx","pizza","tv show","home");
+
+    // tuples in rust actvity 9
+
+    let (x,y) = (3,5);
+
+    fn my_coord()->(i32,i32){
+
+         (4,5)
+
+    }
+
+    let (x,y) = my_coord();
+    if(y>5){
+        println!(">5");
+    }else if(y<5){
+        println!("<5");
+    }else{
+        println!("=5");
+
+    }
 
 
- 
+    // Expression in rust
+
+    // secret file admin only
+
+    let access_level = Access::Guest;
+    let can_access_file=match access_level {
+        Access::Admin => true,
+        _ => false,
+        
+    };
+    println!("{:?}",can_access_file);
+
+
+    // Expression activity 10
+
+    let size =90;
+
+    let is_it_bigger = size>100;
+
+    fn is_big(is_biger_than:bool){
+        match is_biger_than {
+            true=> println!(" true"),
+            false => println!("false"),
+            
+        }
+
+
+    }
+
+    is_big(is_it_bigger);
+
+
+    // 
+
+   
+
+
 
  
 
